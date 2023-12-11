@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       ),
       home: StoreProvider<int>(
         store: store,
-        child: const HomeScreen(),
+        child: HomeScreen(),
       ),
     );
   }

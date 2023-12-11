@@ -17,6 +17,7 @@ dependencies:
   google_fonts: ^6.1.0
   smooth_page_indicator: ^1.1.0
   another_transformer_page_view: ^2.0.1
+
   flutter_svg: ^2.0.9
 
   flutter_redux: ^0.10.0
