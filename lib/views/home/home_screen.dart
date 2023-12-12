@@ -45,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 bottom: 20.0,
               ),
               child: TransformerPageView(
-                loop: true,
+                loop: false,
                 scrollDirection: Axis.vertical,
                 curve: Curves.easeInBack,
                 itemCount: _pages.length,

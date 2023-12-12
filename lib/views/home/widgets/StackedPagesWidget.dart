@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_redux/flutter_redux.dart';
 import '../../../utils/colors.dart';
 
 class StackedPagesWidget extends StatelessWidget {
@@ -13,8 +14,19 @@ class StackedPagesWidget extends StatelessWidget {
         Expanded(
           child: child,
         ),
-        buildContainer(8, 10, Bg2),
-        buildContainer(7, 20, Bg3),
+        StoreConnector<int, int>(
+          converter: (store) => store.state,
+          builder: (context, pageIndex) {
+            return Column(
+              children: [
+                if(pageIndex < 3)
+                buildContainer(8, 10, Bg2),
+                if(pageIndex < 2)
+                buildContainer(7, 20, Bg3),
+              ],
+            );
+          },
+        ),
       ],
     );
   }
